@@ -3,6 +3,7 @@ GPTDiscordBotは、Discord上でchatGPTを使用するためのBotです。ユ�
 
 # 動作環境
 Python 3.11.0
+
 chatGPT gpt-3.5-turbo
 
 # 使用方法
