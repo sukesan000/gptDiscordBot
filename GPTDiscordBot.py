@@ -2,8 +2,8 @@ import openai
 import discord
 
 # OpenAI APIキーを設定する
-openai.api_key = "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"
-discord_token = "MTA4MTM5ODIzMjcyNDI3NTI1MA.GclOPh.WPNpHSqgcEH9eR-Sftcf_jbhry458wCPRKWT9c"
+openai.api_key = ""
+discord_token = ""
 engine = "gpt-3.5-turbo"
 
 # DiscordのIntentsを設定する
