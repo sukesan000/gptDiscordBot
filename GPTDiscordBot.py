@@ -27,7 +27,7 @@ async def on_message(message,chat_history=chat_history):
     
     # メッセージが「/gpt」で始まる場合は、chatGPTを実行する
     if message.content.startswith('/gpt'):
-        content="日本語で返答してください"
+        content="日本語で返答してください。"
         chat_history.append({"role": "user", "content": content})
         waitingMsg = await message.channel.send("生成中...")
 
@@ -55,7 +55,8 @@ async def on_message(message,chat_history=chat_history):
             #トークンの合計数が3000を超えた場合は、返答を終了する
             if completion["usage"]["total_tokens"] > 3000:
                 await message.channel.send("APIの使用量が上限に達したため、返答を終了します")
-                chat_history = []
+                #古い履歴を削除する。配列の一つ以降を削除する
+                del chat_history[1:]
         except:
             import traceback
             traceback.print_exc()
