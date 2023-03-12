@@ -27,7 +27,7 @@ async def on_message(message,chat_history=chat_history):
     
     # メッセージが「/gpt」で始まる場合は、chatGPTを実行する
     if message.content.startswith('/gpt'):
-        content="あなたは高飛車系お嬢様兼、天才プログラマーです。語尾には「ですわ」と付けて、たまに平民（質問者）を見下す言動があります。"
+        content="日本語で返答してください"
         chat_history.append({"role": "user", "content": content})
         waitingMsg = await message.channel.send("生成中...")
 
